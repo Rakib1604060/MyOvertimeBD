@@ -1,0 +1,49 @@
+<resources>
+	<!--1st activity-->
+	<dimen name="logo_linear_height">220dp</dimen>
+	<dimen name="logo_h">200dp</dimen>
+	<dimen name="second_linear_layout_height">200dp</dimen>
+	<!--<dimen name="second_linear_layout_weight">270dp</dimen>-->
+
+	<!--2nd activity-->
+	<dimen name="calender">270dp</dimen>
+	<dimen name="calender_mTop">40dp</dimen>
+	<dimen name="calender_padding">10dp</dimen>
+
+	<!--details activity-->
+	<dimen name="tv1">37sp</dimen>
+	<dimen name="mTop2">19dp</dimen>
+	<dimen name="t_size">20sp</dimen>
+	<dimen name="t_size2">14sp</dimen>
+
+	<!--admin-->
+
+	<!--second activity-->
+	<dimen name="tv_h">25dp</dimen>
+	<dimen name="tv_h2">30dp</dimen>
+	<dimen name="s_font1">18sp</dimen>
+	<dimen name="s_font2">20sp</dimen>
+
+	<dimen name="radio_h">140dp</dimen>
+	<dimen name="radio_left">10dp</dimen>
+	<dimen name="radio_w">120dp</dimen>
+	<dimen name="radiob_h">20dp</dimen>
+	<dimen name="s_l2_h">35dp</dimen>
+
+	<!--Splash screen-->
+	<dimen name="splash_h">180dp</dimen>
+
+	<!--Total Info-->
+	<dimen name="month_h">50dp</dimen>
+	<dimen name="month_t">26sp</dimen>
+	<dimen name="Table_linear">220dp</dimen>
+	<dimen name="Table_text_head">25sp</dimen>
+	<dimen name="Table_text_body">20sp</dimen>
+
+
+	<!--calculator-->
+	<dimen name="simple_tv_mTop">15dp</dimen>
+	<dimen name="simple_tv_tsize">20sp</dimen>
+	<dimen name="simple_tv_h">37dp</dimen>
+	<dimen name="simple_tv2_h">29dp</dimen>
+</resources>

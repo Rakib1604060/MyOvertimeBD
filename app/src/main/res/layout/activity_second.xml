@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Layout.Second">
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/date"
+        android:textStyle="bold"
+        android:textSize="@dimen/s_font1"
+        android:id="@+id/date"
+        android:textColor="#fff"
+        android:background="#000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/t"
+        android:background="@color/header"
+        android:layout_marginRight="8dp"
+        android:layout_below="@id/date"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="8dp"
+        android:text="@string/selectyourshift"
+        android:paddingLeft="5dp"
+        android:textStyle="bold"
+        android:textSize="@dimen/s_font2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/t"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_cview">
+
+        <RadioButton
+            android:id="@+id/btn01"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/radiob_h"
+            android:layout_marginTop="10dp"
+            android:text="@string/regular" />
+
+        <RadioButton
+            android:id="@+id/btn02"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/radiob_h"
+            android:layout_marginTop="10dp"
+            android:text="@string/day" />
+
+        <RadioButton
+            android:id="@+id/btn03"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/radiob_h"
+            android:layout_marginTop="10dp"
+            android:text="@string/night" />
+
+        <RadioButton
+            android:id="@+id/btn04"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/radiob_h"
+            android:layout_marginTop="10dp"
+            android:text="@string/holiday" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:weightSum="3"
+        android:layout_below="@+id/rg"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/ins_info"
+            android:background="@drawable/rounded_corner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:hint="@string/addhour"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:inputType="numberDecimal" />
+        <Button
+            android:layout_weight="1"
+            android:text="@string/save"
+            android:id="@+id/savebuttonid"
+            android:textColor="#fff"
+            android:background="@drawable/button_custom"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

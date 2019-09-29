@@ -1,0 +1,54 @@
+<resources>
+    <!--1st activity-->
+    <dimen name="logo_linear_height">100dp</dimen>
+    <dimen name="logo_h">95dp</dimen>
+    <dimen name="second_linear_layout_height">120dp</dimen>
+    <!--<dimen name="second_linear_layout_weight">270dp</dimen>-->
+
+    <!--2nd activity-->
+    <dimen name="calender">250dp</dimen>
+    <dimen name="calender_mTop">40dp</dimen>
+    <dimen name="calender_padding">10dp</dimen>
+
+    <!--details activity-->
+    <dimen name="tv1">20sp</dimen>
+
+    <dimen name="mTop2">15dp</dimen>
+    <dimen name="t_size">13sp</dimen>
+    <dimen name="t_size2">10sp</dimen>
+
+    <!--admin-->
+
+    <!--second activity-->
+    <dimen name="s_mtop">10dp</dimen>
+    <dimen name="tv_h">20dp</dimen>
+    <dimen name="tv_h2">26dp</dimen>
+    <dimen name="s_font1">15sp</dimen>
+    <dimen name="s_font2">20sp</dimen>
+
+    <dimen name="radio_h">140dp</dimen>
+    <dimen name="radio_left">10dp</dimen>
+    <dimen name="radio_w">120dp</dimen>
+    <dimen name="radiob_h">20dp</dimen>
+    <dimen name="s_l2_h">35dp</dimen>
+
+    <!--Splash screen-->
+    <dimen name="splash_h">180dp</dimen>
+
+    <!--Total Info-->
+    <dimen name="month_h">25dp</dimen>
+    <dimen name="month_t">15sp</dimen>
+    <dimen name="Table_linear">128dp</dimen>
+    <dimen name="Table_text_head">16sp</dimen>
+    <dimen name="Table_text_body">14sp</dimen>
+
+
+    <!--calculator-->
+    <dimen name="simple_tv_mTop">10dp</dimen>
+    <dimen name="simple_tv_tsize">15sp</dimen>
+    <dimen name="simple_tv_h">26dp</dimen>
+    <dimen name="simple_tv2_h">20dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

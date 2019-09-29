@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/stv"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="8dp"
+        android:background="@color/header"
+        android:layout_marginLeft="8dp"
+        android:textSize="@dimen/simple_tv_tsize"
+        android:textStyle="bold"
+        android:paddingLeft="5dp"
+        android:text="@string/calculate"
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/simple_tv_h" />
+    <View
+        android:id="@+id/sv"
+        android:layout_below="@id/stv"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"/>
+    <LinearLayout
+        android:layout_below="@id/sv"
+        android:id="@+id/l1"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="34dp"
+            android:id="@+id/basicsalaryy"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:layout_weight="1"
+            android:text="@string/basicsalary" />
+
+        <EditText
+            android:id="@+id/bsalary"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:ems="1"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginRight="50dp"
+            android:inputType="numberDecimal" />
+                <TextView
+                    android:text="@string/taka"
+                    android:id="@+id/takaa"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                    android:layout_height="@dimen/simple_tv2_h"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_below="@id/l1"
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/totalovertime"
+            android:layout_height="@dimen/simple_tv2_h"
+            android:id="@+id/totalovert"
+            android:layout_weight="1"
+
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            />
+
+        <EditText
+            android:id="@+id/othr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:ems="1"
+            android:background="@drawable/rounded_corner"
+            android:layout_marginRight="50dp"
+            android:inputType="numberDecimal" />
+        <TextView
+            android:text="@string/hour"
+            android:id="@+id/hourrr"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:layout_height="@dimen/simple_tv2_h"
+            android:layout_weight="1"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/v"
+        android:layout_below="@id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorPrimaryDark"/>
+    <Button
+        android:id="@+id/calculate"
+        android:text="@string/calculate"
+
+        android:textColor="#fff"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_custom"
+        android:layout_below="@id/v"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginTop="5dp"
+        android:id="@+id/v2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/calculate"
+        android:background="@color/colorPrimaryDark" />
+    <LinearLayout
+        android:id="@+id/l3"
+        android:layout_below="@id/v2"
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/hourlyotrate"
+            android:layout_height="@dimen/simple_tv2_h"
+            android:layout_weight="1"
+            android:id="@+id/hourly"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            />
+        <TextView
+            android:id="@+id/otr"
+            android:text="@string/taka"
+            android:textColor="#000"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:background="@drawable/custom_cview"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_height="@dimen/simple_tv2_h"
+            android:layout_marginRight="60dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_gravity="end" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l4"
+        android:layout_below="@id/l3"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+
+            android:text="@string/Overtimeamount"
+            android:layout_height="@dimen/simple_tv2_h"
+            android:layout_weight="1"
+            android:id="@+id/overtimeamount"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            />
+        <TextView
+            android:text="@string/taka"
+            android:id="@+id/ota"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:layout_height="@dimen/simple_tv2_h"
+            android:background="@drawable/custom_cview"
+            android:layout_marginRight="60dp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+            android:layout_width="match_parent"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginTop="1dp"
+        android:id="@+id/v3"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/l4"
+        android:background="@color/colorPrimaryDark" />
+
+    <Button
+        android:id="@+id/scalcu"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v3"
+        android:textColor="#fff"
+        android:background="@drawable/button_custom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/simple_tv_mTop"
+        android:onClick="scalculator"
+        android:text="@string/calculator" />
+
+
+</RelativeLayout>
+

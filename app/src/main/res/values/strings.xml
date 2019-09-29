@@ -1,0 +1,162 @@
+<!DOCTYPE resources []>
+<resources>
+    <string name="app_name">My Overtime BD</string>
+    <string name="appId">ca-app-pub-5998919965178917~2591159730</string>
+    <string name="bannerAd">ca-app-pub-3843685343138811/5180908487</string>
+    <string name="interstitialAd">ca-app-pub-3843685343138811/5771935425</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_my_main">MyMainActivity</string>
+
+
+    //MainActivity
+
+    <string name="addhour">Add Hour</string>
+    <string name="detailslist">Details List</string>
+    <string name="totalrecord">Total Record</string>
+    <string name="otcalculator">OT Calculator</string>
+    <string name="clearrecord">Clear Record</string>
+    <string name="sharethisapp">Share This App</string>
+    <string name="rateus">Rate Us</string>
+    <string name="contactus">Contact Us</string>
+    <string name="aboutfounder">About Founder</string>
+    <string name="exit">Exit</string>
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+    <string name="exitfromtheapp">Do You Want To Exit From this App?</string>
+    <string name="yes">Yes</string>
+    <string name="No">No</string>
+
+
+    //addhour activity
+
+    <string name="selectyourshift">Select Your Shift</string>
+    <string name="regular">Regular</string>
+    <string name="day">Day</string>
+    <string name="night">Night</string>
+    <string name="holiday">Holiday</string>
+    <string name="save">Save</string>
+    <string name="successfullyinserted">Successfully Inserted!!</string>
+
+    //details activity
+    <string name="overtimedetails">Overtime Details</string>
+    <string name="date">Date</string>
+
+
+    //total record
+  <string name="currentmont">Current Month</string>
+    <string name="shift">Shift</string>
+    <string name="hour">Hour</string>
+    <string name="total">Total</string>
+    <string name="previousmonth">Previous Month</string>
+    //calculator
+    <string name="warning">Warning</string>
+    <string name="doyouwantfetch">Do You Want to Fetch Total OT Hours Data?</string>
+    <string name="basicsalary">  Basic Salary</string>
+    <string name="totalovertime">  Total Overtime</string>
+    <string name="calculate">Calculate</string>
+    <string name="hourlyotrate">  Hourly OT Rate</string>
+    <string name="Overtimeamount">  Overtime Amount</string>
+    <string name="taka">Taka</string>
+    <string name="calculator">Calculator</string>
+
+    //login signup
+    <string name="signupwithgoogle">Log In with Your Gmail Account </string>
+    <string name="signuplate">To  Skip press the Button</string>
+    <string name="skip">Skip</string>
+    <string name="doyouwanttoexit">Do you want to exit the app now?</string>
+
+
+
+    <string name="resetalldata">Successfully! Reset all data</string>
+    <string name="deletealldata">Do you want to Delete all Data?</string>
+
+  <string name="language">Language</string>
+
+
+
+
+    <string name="title_homeb">হোম</string>
+    <string name="title_dashboardb">ড্যাসবোর্ড</string>
+    <string name="title_notificationsb">নটিফিকেশন</string>
+    <string name="title_activity_my_mainb">MyMainActivity</string>
+
+
+    //MainActivity
+
+    <string name="addhourb">ঘন্টা যোগ</string>
+    <string name="detailslistb">বিস্তারিত লিস্ট</string>
+    <string name="totalrecordb">ওটি বিবরণ</string>
+    <string name="otcalculatorb">ওটি ক্যালকুলেটর</string>
+    <string name="clearrecordb">রেকর্ডস মুছুন</string>
+    <string name="sharethisappb">এপ্পস টি শেয়ার করুন</string>
+    <string name="rateusb">রেটিং দিন</string>
+    <string name="contactusb">যোগাযোগ করুন</string>
+    <string name="aboutfounderb">প্রতিষ্ঠাতা </string>
+    <string name="exitb">বের হউন</string>
+    <string name="homeb">হোম</string>
+    <string name="notificationb">প্রজ্ঞাপন</string>
+    <string name="profileb">প্রোফাইল</string>
+    <string name="exitfromtheappb">আপনি কি এই এপ্পস থেকে বের হতে চান?</string>
+    <string name="yesb">হ্যা</string>
+    <string name="Nob">না</string>
+
+
+    //addhour activity
+
+    <string name="selectyourshiftb">আপনার শিফট বেছে নিন</string>
+    <string name="regularb">রেগুলার</string>
+    <string name="dayb">ডে</string>
+    <string name="nightb">নাইট</string>
+    <string name="holidayb">ছুটির দিন</string>
+    <string name="saveb">সেভ করুন</string>
+    <string name="successfullyinsertedb">সফল ভাবে সেভ হয়েছে!!</string>
+
+    //details activity
+    <string name="overtimedetailsb">ওভারটাইমের বিস্তারিত</string>
+    <string name="dateb">তারিখ</string>
+
+
+    //total record
+    <string name="currentmontb">বর্তমান মাস</string>
+    <string name="shiftb">শিফট</string>
+    <string name="hourb">ঘন্টা</string>
+    <string name="totalb">মোট</string>
+    <string name="previousmonthb"> গত মাস</string>
+    //calculator
+    <string name="warningb">সতর্কতা!</string>
+    <string name="doyouwantfetchb">আপনি কি টোটাল ঘন্টার ডাটা নিতে চান?</string>
+    <string name="basicsalaryb">  মূল বেতন</string>
+    <string name="totalovertimeb">  মোট ওভারটাইম</string>
+    <string name="calculateb">হিসাব করুন</string>
+    <string name="hourlyotrateb">  প্রতি ঘন্টা ওভারটাইম রেট</string>
+    <string name="Overtimeamountb">  ওভারটাইমের পরিমাণ</string>
+    <string name="takab">টাকা</string>
+    <string name="calculatorb">ক্যালকুলেটর</string>
+
+
+    // signup login
+    <string name="signupwithgoogleb">লগ ইন করতে নিচের বাটন চাপুন </string>
+    <string name="signuplateb">স্কিপ করে যেতে নিচের বাটন এ ক্লিক করুন </string>
+    <string name="skipb">প্রবেশ করুন</string>
+
+    <string name="doyouwanttoexitb">আপনি কি এপ্পস থেকে বের হতে চান?</string>
+    <string name="languageb">ভাষা</string>
+    <string name="resetalldatab">সফলভাবে সব ডাটা রিসেট হয়েছে!!</string>
+    <string name="deletealldatab">আপনি কি সব ডাটা মুছে ফেলতে চান?</string>
+
+
+
+
+
+
+
+
+
+
+
+</resources>

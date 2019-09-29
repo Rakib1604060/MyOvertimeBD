@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+ >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/overtimedetails"
+        android:textAlignment="center"
+        android:textSize="@dimen/tv1" />
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/header">
+
+            <TableRow>
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/t_size"
+                    android:id="@+id/datee"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/date" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/t_size"
+                    android:id="@+id/regu"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/regular" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/t_size"
+                    android:id="@+id/dayy"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/day" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/t_size"
+                    android:id="@+id/nig"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/night" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:textSize="@dimen/t_size"
+                    android:id="@+id/holid"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/holiday" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lvStudents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
