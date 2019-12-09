@@ -23,8 +23,10 @@ public class DbHelper extends SQLiteOpenHelper {
     public static final String OVERTIME_COLUMN_DAY = "Day";
     public static final String OVERTIME_COLUMN_NIGHT = "Night";
     public static final String OVERTIME_COLUMN_OFF= "Off";
+    public static final String  OVERTIME_COLUMN_LEAVE="Leave";
 
-    private static final int DATABASE_VERSION = 3;
+
+    private static final int DATABASE_VERSION = 4;
 
     public DbHelper( Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -41,7 +43,8 @@ public class DbHelper extends SQLiteOpenHelper {
                 ""+OVERTIME_COLUMN_REGULAR+" DOUBLE NOT NULL," +
                 ""+OVERTIME_COLUMN_DAY+" DOUBLE NOT NULL," +
                 ""+OVERTIME_COLUMN_NIGHT+" DOUBLE NOT NULL," +
-                ""+OVERTIME_COLUMN_OFF+" DOUBLE NOT NULL)"
+                ""+OVERTIME_COLUMN_OFF+" DOUBLE NOT NULL, " +
+                ""+OVERTIME_COLUMN_LEAVE+" INTEGER DEFAULT 0 )"
         );
 
     }
@@ -60,13 +63,30 @@ public class DbHelper extends SQLiteOpenHelper {
         contentValues.put(OVERTIME_COLUMN_DAY,0 /*tOvertime.getDay()*/);
         contentValues.put(OVERTIME_COLUMN_NIGHT,0/*tOvertime.getNight()*/);
         contentValues.put(OVERTIME_COLUMN_OFF,0/*tOvertime.getOff()*/);
+
         try {
             return db.insert(""+OVERTIME_TABLE_NAME+"", null, contentValues);
         }catch (SQLException e){
             return -1;
         }
     }
+    public long addDataLeave(OverTime over){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(OVERTIME_COLUMN_DATE,over.getDate());
+        contentValues.put(OVERTIME_COLUMN_REGULAR,0);
+        contentValues.put(OVERTIME_COLUMN_DAY,0);
+        contentValues.put(OVERTIME_COLUMN_NIGHT,0/*tOvertime.getNight()*/);
+        contentValues.put(OVERTIME_COLUMN_OFF,0/*tOvertime.getOff()*/);
+        contentValues.put(OVERTIME_COLUMN_LEAVE,over.getLeave());
 
+        try {
+            return db.insert(""+OVERTIME_TABLE_NAME+"", null, contentValues);
+        }catch (SQLException e){
+            return -1;
+        }
+
+    }
     public long addDataDay(OverTime tOvertime){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -191,6 +211,8 @@ public class DbHelper extends SQLiteOpenHelper {
             tOvertime.setDay(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_DAY)));
             tOvertime.setNight(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_NIGHT)));
             tOvertime.setOff(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_OFF)));
+            tOvertime.setLeave(res.getInt(res.getColumnIndex(OVERTIME_COLUMN_LEAVE)));
+
             array_list.add(tOvertime);
             res.moveToNext();
         }

@@ -68,6 +68,20 @@
             android:layout_height="@dimen/radiob_h"
             android:layout_marginTop="10dp"
             android:text="@string/holiday" />
+
+        <RadioButton
+            android:id="@+id/btn05"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/radiob_h"
+            android:layout_marginTop="10dp"
+            android:text="@string/leavee" />
+        <RadioButton
+            android:id="@+id/btn06"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/radiob_h"
+            android:layout_marginTop="10dp"
+            android:text="@string/dayoff" />
+
     </RadioGroup>
 
     <LinearLayout

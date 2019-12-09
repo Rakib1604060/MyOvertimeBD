@@ -19,6 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.rbysoft.myovertimebd.Adapter.OvertimeAdapter;
 import com.rbysoft.myovertimebd.DbHelper.DbHelper;
 import com.rbysoft.myovertimebd.Model.OverTime;
@@ -33,6 +35,8 @@ public class Fragment_Detailslist extends Fragment {
     TextView overttext,dattext,regutext,daytext,nigtext,holidtext;
     String lang="";
 
+
+
     DbHelper dbHelper;
     @Nullable
     @Override
@@ -44,6 +48,8 @@ public class Fragment_Detailslist extends Fragment {
         if (lang.equals("bn")){
           UpdateResource();
         }
+
+
 
 
         dbHelper = new DbHelper(getActivity());

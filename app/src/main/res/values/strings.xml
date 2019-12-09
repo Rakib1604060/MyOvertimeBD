@@ -40,6 +40,8 @@
     <string name="night">Night</string>
     <string name="holiday">Holiday</string>
     <string name="save">Save</string>
+    <string name="leavee">Leave</string>
+    <string name="dayoff">Day Off</string>
     <string name="successfullyinserted">Successfully Inserted!!</string>
 
     //details activity
@@ -113,6 +115,8 @@
     <string name="dayb">ডে</string>
     <string name="nightb">নাইট</string>
     <string name="holidayb">ছুটির দিন</string>
+    <string name="leaveeb">বন্ধ</string>
+
     <string name="saveb">সেভ করুন</string>
     <string name="successfullyinsertedb">সফল ভাবে সেভ হয়েছে!!</string>
 

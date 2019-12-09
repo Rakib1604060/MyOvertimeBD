@@ -121,6 +121,9 @@ public class Fragment_Second extends Fragment {
             overTime.setNight(Double.valueOf(editText.getText().toString()));
             if (dbHelper.addDataNight(overTime)>0){
                 Toast.makeText(getActivity(), "Successfully Inserted!", Toast.LENGTH_SHORT).show();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.Fragment_Container,new Fragment_home())
+                        .commit();
 
             }else {
                 Toast.makeText(getActivity(), "Already Inserted!", Toast.LENGTH_SHORT).show();
@@ -138,6 +141,33 @@ public class Fragment_Second extends Fragment {
             } else {
                 Toast.makeText(getActivity(), "Already Inserted!", Toast.LENGTH_SHORT).show();
             }
+        }else if (SelectedId==R.id.btn05){
+            overTime.setDate(getArguments().getString("DATEOFNOW"));
+            overTime.setLeave(10);
+            if (dbHelper.addDataLeave(overTime) > 0) {
+                Toast.makeText(getActivity(), "Successfully Inserted!", Toast.LENGTH_SHORT).show();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.Fragment_Container,new Fragment_home())
+                        .commit();
+
+            } else {
+                Toast.makeText(getActivity(), "Already Inserted!", Toast.LENGTH_SHORT).show();
+            }
+
+        }else if (SelectedId==R.id.btn06){
+            overTime.setDate(getArguments().getString("DATEOFNOW"));
+            overTime.setLeave(20);
+            if (dbHelper.addDataLeave(overTime) > 0) {
+                Toast.makeText(getActivity(), "Successfully Inserted!", Toast.LENGTH_SHORT).show();
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.Fragment_Container,new Fragment_home())
+                        .commit();
+
+            } else {
+                Toast.makeText(getActivity(), "Already Inserted!", Toast.LENGTH_SHORT).show();
+            }
+
+
         }
         else {
             Toast.makeText(getActivity(), "First Select Your shift", Toast.LENGTH_SHORT).show();

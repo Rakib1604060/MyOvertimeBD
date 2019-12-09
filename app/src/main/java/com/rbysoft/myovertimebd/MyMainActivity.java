@@ -12,7 +12,10 @@ import android.os.Bundle;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rbysoft.myovertimebd.DbHelper.DbHelper;
 import com.rbysoft.myovertimebd.Layout.FounderPage;
@@ -40,7 +43,7 @@ public class MyMainActivity extends AppCompatActivity {
 
    String lang="en";
    Boolean isPossible=false;
-
+    private InterstitialAd mInterstitialAd;
 
 
 
@@ -61,6 +64,13 @@ public class MyMainActivity extends AppCompatActivity {
 
                     return true;
                 case R.id.navigation_dashboard:
+                    if (mInterstitialAd.isLoaded()) {
+                        mInterstitialAd.show();
+                    } else {
+                        Log.d("TAG", "The interstitial wasn't loaded yet.");
+                    }
+
+
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.Fragment_Container,new Fragment_Detailslist())
                             .addToBackStack("MAINSTACK")
@@ -111,6 +121,16 @@ public class MyMainActivity extends AppCompatActivity {
         if (lang.equals("bn")&& isPossible){
             UpdateResources();
         }
+
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+           public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-5998919965178917/3766204015");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
 
 

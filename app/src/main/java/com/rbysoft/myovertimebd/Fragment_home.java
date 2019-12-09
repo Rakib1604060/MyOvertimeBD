@@ -52,12 +52,6 @@ public class Fragment_home extends Fragment {
             UpdateResource();
         }
 
-        MobileAds.initialize(getActivity(), new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
-
         myad = rootview.findViewById(R.id.myadview);
         AdRequest adRequest = new AdRequest.Builder().build();
         myad.loadAd(adRequest);
