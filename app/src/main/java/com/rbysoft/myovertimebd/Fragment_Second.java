@@ -33,6 +33,8 @@ public class Fragment_Second extends Fragment {
     RadioButton daytext,regulartext,nighttext,holidaytext;
 
     TextView selecttext;
+    boolean isoff=false;
+
 
 
 
@@ -174,6 +176,7 @@ public class Fragment_Second extends Fragment {
         }
     }
     public void Insert() {
+
         if(Valid()){
             insertInfo();
             CloseKeyBoard();
@@ -181,6 +184,12 @@ public class Fragment_Second extends Fragment {
     }
 
     private boolean Valid() {
+        int SelectedId=rd.getCheckedRadioButtonId();
+        if (SelectedId==R.id.btn05||SelectedId==R.id.btn06){
+            return  true;
+
+        }
+
         if(editText.getText().toString().length()==0)
         {
             AlertDialog.Builder alerDialogBuilder = new AlertDialog.Builder(getActivity());
