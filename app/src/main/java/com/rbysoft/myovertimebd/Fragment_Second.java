@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,13 +25,13 @@ import androidx.fragment.app.Fragment;
 import com.rbysoft.myovertimebd.DbHelper.DbHelper;
 import com.rbysoft.myovertimebd.Model.OverTime;
 
-public class Fragment_Second extends Fragment {
+public class Fragment_Second extends Fragment implements CompoundButton.OnCheckedChangeListener {
     RadioGroup rd;
     View rootview;
     TextView txtdate;
     EditText editText;
     Button saveButton;
-    RadioButton daytext,regulartext,nighttext,holidaytext;
+    RadioButton daytext,regulartext,nighttext,holidaytext,leave,off;
 
     TextView selecttext;
     boolean isoff=false;
@@ -227,8 +228,19 @@ public class Fragment_Second extends Fragment {
        regulartext=rootview.findViewById(R.id.btn01);
        nighttext=rootview.findViewById(R.id.btn03);
        holidaytext=rootview.findViewById(R.id.btn04);
+       leave=rootview.findViewById(R.id.btn05);
+       off=rootview.findViewById(R.id.btn06);
+       leave.setOnCheckedChangeListener(this);
+       off.setOnCheckedChangeListener(this);
     }
 
 
-
+    @Override
+    public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+        if (leave.isChecked()||off.isChecked()){
+            editText.setVisibility(View.GONE);
+        }else{
+            editText.setVisibility(View.VISIBLE);
+        }
+    }
 }

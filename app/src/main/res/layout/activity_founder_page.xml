@@ -42,7 +42,7 @@
           android:layout_marginEnd="8dp"
           android:layout_marginRight="8dp"
           android:fontFamily="monospace"
-          android:text="Concept,Founder &amp; CEO "
+          android:text="Concept,Founder"
           android:textColor="#000"
           android:textSize="16sp"
           android:textStyle="italic"
@@ -67,12 +67,14 @@
           android:layout_marginTop="8dp"
           android:layout_marginEnd="8dp"
           android:layout_marginRight="8dp"
+
           android:layout_marginBottom="32dp"
           android:onClick="call"
           android:text="Email:saifulbip@gmail.com"
           android:textColor="#000"
           android:textSize="12sp"
           android:textStyle="italic"
+
           app:layout_constraintBottom_toBottomOf="parent"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"

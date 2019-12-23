@@ -3,6 +3,7 @@ package com.rbysoft.myovertimebd;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.MenuInflater;
@@ -26,6 +27,8 @@ import com.rbysoft.myovertimebd.DbHelper.DbHelper;
 import com.rbysoft.myovertimebd.Model.OverTime;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class Fragment_Detailslist extends Fragment {
     View rootview;
@@ -54,7 +57,10 @@ public class Fragment_Detailslist extends Fragment {
 
         dbHelper = new DbHelper(getActivity());
         overTimeList = new ArrayList<>();
-        overTimeList = dbHelper.getAllInfo();
+
+
+        overTimeList = dbHelper.GetTwoMonth(getcurrentMonthYear(1),getcurrentMonthYear(2));
+
         adapter = new OvertimeAdapter(getActivity(), overTimeList);
         lv_Overtime = rootview.findViewById(R.id.lvStudents);
         lv_Overtime.setAdapter(adapter);
@@ -65,6 +71,36 @@ public class Fragment_Detailslist extends Fragment {
         return rootview;
 
     }
+   private  String getcurrentMonthYear(int a){
+        Date today=new Date();
+
+        Calendar cal=Calendar.getInstance();
+        cal.setTime(today);
+
+       int month = cal.get(Calendar.MONTH);
+       month++;
+
+       int year = cal.get(Calendar.YEAR);
+
+       if (a==1){
+           String dat=month+"-"+year;
+           return  dat;}
+       else{
+           if (month==1){
+               year=year-1;
+               month=12;
+
+           }else{
+               month=month-1;
+
+           }
+           String datt=month+"-"+year;
+           return datt;
+
+       }
+
+
+   }
 
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
@@ -87,11 +123,10 @@ public class Fragment_Detailslist extends Fragment {
     }
 
     private void InitializeCompo() {
-
         overttext=rootview.findViewById(R.id.textView2);
-       dattext=rootview.findViewById(R.id.datee);
-       regutext=rootview.findViewById(R.id.regu);
-       daytext=rootview.findViewById(R.id.dayy);
+        dattext=rootview.findViewById(R.id.datee);
+        regutext=rootview.findViewById(R.id.regu);
+        daytext=rootview.findViewById(R.id.dayy);
         nigtext=rootview.findViewById(R.id.nig);
         holidtext=rootview.findViewById(R.id.holid);
 

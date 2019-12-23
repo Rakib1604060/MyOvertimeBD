@@ -194,11 +194,40 @@ public class DbHelper extends SQLiteOpenHelper {
             return -1;
         }
     }
+    public ArrayList<OverTime>GetTwoMonth(String date1,String date2){
+
+        ArrayList<OverTime>temp=new ArrayList<>();
+        SQLiteDatabase db=this.getReadableDatabase();
+        String sql="SELECT * FROM "+OVERTIME_TABLE_NAME+" where Date like '%-"+date1+"%' OR Date like '%-"+date2+"%' ORDER BY "+OVERTIME_COLUMN_ID+" DESC ;";
+        Cursor res=db.rawQuery(sql,null);
+        res.moveToFirst();
+        while (!res.isAfterLast()){
+
+            OverTime tOvertime= new OverTime();
+
+            tOvertime.setId(res.getInt(res.getColumnIndex(OVERTIME_COLUMN_ID)));
+            tOvertime.setDate(res.getString(res.getColumnIndex(OVERTIME_COLUMN_DATE)));
+            tOvertime.setRegular(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_REGULAR)));
+            tOvertime.setDay(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_DAY)));
+            tOvertime.setNight(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_NIGHT)));
+            tOvertime.setOff(res.getDouble(res.getColumnIndex(OVERTIME_COLUMN_OFF)));
+            tOvertime.setLeave(res.getInt(res.getColumnIndex(OVERTIME_COLUMN_LEAVE)));
+
+            temp.add(tOvertime);
+            res.moveToNext();
+
+        }
+        return temp;
+    }
+
+
     public ArrayList<OverTime> getAllInfo(){
 
         ArrayList<OverTime> array_list = new ArrayList<OverTime>();
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("SELECT * FROM  "+OVERTIME_TABLE_NAME+";", null);
+        String sql="SELECT * FROM "+OVERTIME_TABLE_NAME+" ORDER BY "+OVERTIME_COLUMN_ID+" DESC ;";
+
+        Cursor res = db.rawQuery(sql, null);
         res.moveToFirst();
 
         while (!res.isAfterLast()){

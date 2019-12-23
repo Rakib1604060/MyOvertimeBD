@@ -110,7 +110,7 @@ public class MyMainActivity extends AppCompatActivity {
         lang=Saving.getAString(this,"Language");
 
         if (lang==null){
-            Saving.saveAString(this,"Language","bn");
+            Saving.saveAString(this,"Language","En");
 
         }
 
