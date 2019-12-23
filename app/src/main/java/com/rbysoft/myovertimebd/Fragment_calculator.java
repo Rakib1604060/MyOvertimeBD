@@ -36,14 +36,15 @@ import java.util.List;
 public class Fragment_calculator extends Fragment {
 
     View rootview;
-    EditText B_salary,Ot_hour;
+    EditText M_salary,Ot_hour;
     DbHelper dbHelper;
     private AdView mAdView;
     private ClipboardManager myClipboard;
     private ClipData myClip;
-    TextView OT_rate,OT_ammount;
+    TextView OT_rate,OT_ammount,youwillgettext,taka,mainsaltext,ygtext;
+
     DecimalFormat df2;
-    double Bsal,Thour,Ot_rate,Ot_ammont,fetchHour;
+    double Bsal,Thour,Ot_rate,Ot_ammont,fetchHour,Msal,yget;
     Button calculatebutton,calculator;
     String lang;
     TextView calculatetext,basictext,toov,ho,takatext,t1,t2,overtimeamtext,hourlytext;
@@ -69,7 +70,7 @@ public class Fragment_calculator extends Fragment {
 
         df2 = new DecimalFormat( "#,###,###,##0.00" );
 
-        B_salary = rootview.findViewById(R.id.bsalary);
+        M_salary = rootview.findViewById(R.id.msalary);
         Ot_hour =rootview.findViewById(R.id.othr);
 
         OT_rate = rootview.findViewById(R.id.otr);
@@ -139,20 +140,24 @@ public class Fragment_calculator extends Fragment {
         basictext.setText(getResources().getString(R.string.basicsalaryb));
         toov.setText(getResources().getString(R.string.totalovertimeb));
         ho.setText(getResources().getString(R.string.hourb));
-        takatext.setText(getResources().getString(R.string.takab));
+        taka.setText(getResources().getString(R.string.takab));
         t1.setText(getResources().getString(R.string.takab));
         t2.setText(getResources().getString(R.string.takab));
+        mainsaltext.setText(getResources().getString(R.string.mainsalaryb));
         overtimeamtext.setText(getResources().getString(R.string.Overtimeamountb));
         hourlytext.setText(getResources().getString(R.string.hourlyotrateb));
         calculator.setText(getResources().getString(R.string.calculatorb));
         calculatebutton.setText(getResources().getString(R.string.calculateb));
+        ygtext.setText(getResources().getString(R.string.youwillgetb));
 
 
     }
 
     private void InitializeComponents() {
         calculatetext=rootview.findViewById(R.id.stv);
-        basictext=rootview.findViewById(R.id.basicsalaryy);
+        youwillgettext=rootview.findViewById(R.id.ywg);
+         ygtext=rootview.findViewById(R.id.ywgtext);
+        basictext=rootview.findViewById(R.id.basicsalary);
         toov=rootview.findViewById(R.id.totalovert);
         ho=rootview.findViewById(R.id.hourrr);
         takatext=rootview.findViewById(R.id.takaa);
@@ -161,6 +166,9 @@ public class Fragment_calculator extends Fragment {
         overtimeamtext=rootview.findViewById(R.id.overtimeamount);
         hourlytext=rootview.findViewById(R.id.hourly);
         calculator=rootview.findViewById(R.id.scalcu);
+        mainsaltext=rootview.findViewById(R.id.mainsalary);
+        taka=rootview.findViewById(R.id.takatextt);
+
 
 
 
@@ -228,9 +236,9 @@ public class Fragment_calculator extends Fragment {
     }
 
     private boolean inpuntValid() {
-        if(B_salary.getText().toString().length()==0){
-            //Toast.makeText(this, "Input Basic Salary", Toast.LENGTH_SHORT).show();
-            B_salary.setError("Input Basic Salary");
+        if(M_salary.getText().toString().length()==0){
+            //Toast.makeText(this, "Input Main Salary", Toast.LENGTH_SHORT).show();
+            M_salary.setError("Input Main Salary");
             return false;
         }
         if(Ot_hour.getText().toString().length()==0){
@@ -242,18 +250,23 @@ public class Fragment_calculator extends Fragment {
     }
 
     private void totalCaluculate() {
-        Bsal = Double.parseDouble(B_salary.getText().toString());
+        Msal = Double.parseDouble(M_salary.getText().toString());
         Thour = Double.parseDouble(Ot_hour.getText().toString());
 
         //Formula
 
+        Bsal=(Msal-1850)/1.5;
 
         Ot_rate=(Bsal/208) *2;
         Ot_ammont =Ot_rate * Thour;
         //Total_salary = Bsal + Ot_ammont;
+        takatext.setText(df2.format(Bsal)+" Taka");
 
         OT_rate.setText(df2.format(Ot_rate)+" Taka");
         OT_ammount.setText(df2.format(Ot_ammont)+" Taka");
+        yget=Ot_ammont+Msal;
+        youwillgettext.setText(df2.format(yget)+" Taka");
+
 //        Totalsalary.setText(Total_salary+" Taka");
     }
 

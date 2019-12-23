@@ -59,12 +59,14 @@
     <string name="warning">Warning</string>
     <string name="doyouwantfetch">Do You Want to Fetch Total OT Hours Data?</string>
     <string name="basicsalary">  Basic Salary</string>
+    <string name="mainsalary"> Main Salary</string>
     <string name="totalovertime">  Total Overtime</string>
     <string name="calculate">Calculate</string>
     <string name="hourlyotrate">  Hourly OT Rate</string>
     <string name="Overtimeamount">  Overtime Amount</string>
     <string name="taka">Taka</string>
     <string name="calculator">Calculator</string>
+    <string name="youwillget"> You Will Get</string>
 
     //login signup
     <string name="signupwithgoogle">Log In with Your Gmail Account </string>
@@ -130,6 +132,7 @@
     <string name="shiftb">শিফট</string>
     <string name="hourb">ঘন্টা</string>
     <string name="totalb">মোট</string>
+    <string name="youwillgetb"> আপনি পাবেন</string>
     <string name="previousmonthb"> গত মাস</string>
     //calculator
     <string name="warningb">সতর্কতা!</string>
@@ -137,6 +140,7 @@
     <string name="basicsalaryb">  মূল বেতন</string>
     <string name="totalovertimeb">  মোট ওভারটাইম</string>
     <string name="calculateb">হিসাব করুন</string>
+    <string name="mainsalaryb"> মোট বেতন</string>
     <string name="hourlyotrateb">  প্রতি ঘন্টা ওভারটাইম রেট</string>
     <string name="Overtimeamountb">  ওভারটাইমের পরিমাণ</string>
     <string name="takab">টাকা</string>
