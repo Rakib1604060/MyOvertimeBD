@@ -30,6 +30,8 @@ public class Fragment_total extends Fragment {
         Calendar mCalendar= Calendar.getInstance();
         int month=(mCalendar.get(Calendar.MONTH));
         int year=(mCalendar.get(Calendar.YEAR));
+        int pyear=year;
+
         InitializeComponents();
         String CmonthName,PmonthName;
         CmonthName=theMonth(month);
@@ -37,17 +39,25 @@ public class Fragment_total extends Fragment {
 
         DbHelper dbHelper = new DbHelper(getActivity());
         tv =rootview.findViewById(R.id.ttext);
-        PmonthName=theMonth(month-1);
+        if(month==0){
+            PmonthName=theMonth(11);
+            pyear=pyear-1;
+
+
+        }else{
+            PmonthName=theMonth(month-1);
+        }
+
         ptv = rootview.findViewById(R.id.ttext2);
         if (lang.equals("bn")){
             updateResource();
             tv.setText(getResources().getString(R.string.currentmontb)+" -"+CmonthName+", "+String.valueOf(year));
 
-            ptv.setText(getResources().getString(R.string.previousmonthb)+" - "+PmonthName+", "+String.valueOf(year));
+            ptv.setText(getResources().getString(R.string.previousmonthb)+" - "+PmonthName+", "+String.valueOf(pyear));
 
         }else{
             tv.setText(getResources().getString(R.string.currentmont)+" -"+CmonthName+", "+String.valueOf(year));
-            ptv.setText(getResources().getString(R.string.previousmonth)+" - "+PmonthName+", "+String.valueOf(year));
+            ptv.setText(getResources().getString(R.string.previousmonth)+" - "+PmonthName+", "+String.valueOf(pyear));
         }
 
         rg_tv = rootview.findViewById(R.id.rghr);
@@ -93,6 +103,9 @@ public class Fragment_total extends Fragment {
         ///For Previous Month
 
         Cursor presult,presult_d,presult_n,presult_o;
+        if (month==0){
+            month=12;
+        }
 
         presult= dbHelper.getResultRegular(month);
         if(presult.moveToFirst()) {

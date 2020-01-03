@@ -14,12 +14,15 @@ import com.rbysoft.myovertimebd.R;
 
 public class FounderPage extends AppCompatActivity {
      TextView emailview;
+     TextView facebook;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_founder_page);
         emailview=findViewById(R.id.smail);
+        facebook=findViewById(R.id.sfb);
+        facebook.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_web,0,0,0);
         emailview.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_email_black_24dp,0,0,0);
 
     }

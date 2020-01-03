@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,81 +10,85 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/header"
         android:text="@string/overtimedetails"
         android:textAlignment="center"
-        android:textSize="@dimen/tv1" />
+        android:textSize="@dimen/tv1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="8dp" />
 
     <LinearLayout
-        android:layout_marginTop="15dp"
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="1dp"
+            android:layout_marginRight="8dp"
             android:layout_marginBottom="1dp"
             android:background="@color/header">
 
             <TableRow>
 
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="@dimen/t_size"
                     android:id="@+id/datee"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="@string/date" />
+                    android:text="@string/date"
+                    android:textSize="@dimen/t_size"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="@dimen/t_size"
                     android:id="@+id/regu"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="@string/regular" />
+                    android:text="@string/regular"
+                    android:textSize="@dimen/t_size"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="@dimen/t_size"
                     android:id="@+id/dayy"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="@string/day" />
+                    android:text="@string/day"
+                    android:textSize="@dimen/t_size"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="@dimen/t_size"
                     android:id="@+id/nig"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="@string/night" />
+                    android:text="@string/night"
+                    android:textSize="@dimen/t_size"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="@dimen/t_size"
                     android:id="@+id/holid"
-                    android:layout_gravity="center_horizontal"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
-                    android:text="@string/holiday" />
+                    android:text="@string/holiday"
+                    android:textSize="@dimen/t_size"
+                    android:textStyle="bold" />
 
             </TableRow>
         </TableLayout>
@@ -93,8 +97,23 @@
     <ListView
         android:id="@+id/lvStudents"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:id="@+id/pdfdownloadbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_pdf" />
 
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
