@@ -194,11 +194,11 @@ public class DbHelper extends SQLiteOpenHelper {
             return -1;
         }
     }
-    public ArrayList<OverTime>GetTwoMonth(String date1,String date2){
+    public ArrayList<OverTime>GetCurrentMonth(String date1 ){
 
         ArrayList<OverTime>temp=new ArrayList<>();
         SQLiteDatabase db=this.getReadableDatabase();
-        String sql="SELECT * FROM "+OVERTIME_TABLE_NAME+" where Date like '%-"+date1+"%' OR Date like '%-"+date2+"%' ORDER BY "+OVERTIME_COLUMN_ID+" DESC ;";
+        String sql="SELECT * FROM "+OVERTIME_TABLE_NAME+" where Date like '%-"+date1+"%' ORDER BY "+OVERTIME_COLUMN_ID+" DESC ;";
         Cursor res=db.rawQuery(sql,null);
         res.moveToFirst();
         while (!res.isAfterLast()){

@@ -91,7 +91,7 @@ public class Fragment_Detailslist extends Fragment {
         overTimeList = new ArrayList<>();
 
 
-        overTimeList = dbHelper.GetTwoMonth(getcurrentMonthYear(1),getcurrentMonthYear(2));
+        overTimeList = dbHelper.GetCurrentMonth(getcurrentMonthYear(1));
 
         adapter = new OvertimeAdapter(getActivity(), overTimeList);
         lv_Overtime = rootview.findViewById(R.id.lvStudents);
@@ -315,9 +315,9 @@ public class Fragment_Detailslist extends Fragment {
         document.open();
         Font f = new Font(Font.FontFamily.TIMES_ROMAN, 30.0f, Font.UNDERLINE, BaseColor.BLUE);
         Font g = new Font(Font.FontFamily.COURIER, 14.0f, Font.NORMAL, BaseColor.BLUE);
-        document.add(new Paragraph("MyOvertimeBD \n ", f));
+        document.add(new Paragraph("MyOvertime BD \n ", f));
 
-        document.add(new Paragraph("Koster Takar Nirvul Hisab\n\n\n", g));
+        document.add(new Paragraph("www.facebook.com/MyOvertimeBD\n", g));
         document.add(table);
 
 //        for (int i = 0; i < MyList1.size(); i++) {
@@ -327,6 +327,7 @@ public class Fragment_Detailslist extends Fragment {
 
          //previewPdf();
           openFolder();
+        Toast.makeText(getActivity(), "Open Your Document Folder!!!", Toast.LENGTH_SHORT).show();
     }
 
 
